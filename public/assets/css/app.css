@@ -159,6 +159,42 @@ nav.top-nav {
     padding-bottom: 0rem;
   }
 
+  .title-padding {
+    padding: 20px 10px 10px 20px;
+  }
+
+  .title-font {
+    font-size: 1.3rem;
+  }
+
+  .no-margin-top {
+    margin-top: 0;
+  }
+
+  .label-title {
+    font-size: 1.2rem;
+    line-height: 3rem;
+    color: inherit;
+  }
+
+  .input-margin {
+    margin-top: 0;
+  }
+
+  .input-margin-bottom {
+    margin-top: 30px;
+  }
+
+  .card.large .card-content {
+    max-height: 100% !important;
+    overflow: visible !important;
+}
+
+.file-path-wrapper {
+    padding: 0 10px;
+}
+
+
     @media only screen and (max-width : 992px) {
       nav .nav-wrapper {
         text-align: center; }

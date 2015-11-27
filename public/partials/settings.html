@@ -1,3 +1,50 @@
-<div class="card card-panel hoverable large">
-    <!-- Card Content -->
+<div class="card hoverable large">
+  <div class="card-title">
+      <h5 class="title-font"><i class="material-icons title-padding tiny">settings</i>Store Settings</h5>
+      <div class="divider"></div>
   </div>
+  <div class="card-content">
+    <div class="row no-margin-top">
+      <div class="col s12 l3">
+        <label class="label-title" for="Store Name">
+          Store Name
+        </label>
+      </div>
+      <div class="input-field col s12 l9">
+          <i class="material-icons prefix">store</i>
+          <input id="store_prefix" type="text">
+          <label for="icon_prefix">Store Name</label>
+      </div>
+    </div>
+    <div class="row input-margin-bottom">
+      <div class="col s12 l3">
+        <label class="label-title" for="Greeting">
+          Greeting
+        </label>
+      </div>
+      <div class="input-field col s12 l9">
+          <i class="material-icons prefix">message</i>
+          <input id="icon_prefix" type="text">
+          <label for="icon_prefix">Greeting Message</label>
+      </div>
+    </div>
+    <div class="row input-margin-bottom">
+      <div class="col s12 l3">
+        <label class="label-title" for="File Upload">
+          Page Image
+        </label>
+      </div>
+      <form action="#">
+        <div class="file-field input-field">
+          <div class="btn">
+            <span>File</span>
+            <input type="file">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
