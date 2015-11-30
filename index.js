@@ -32,7 +32,7 @@ app.use(express.static(__dirname + '/public'));
 ///////////////
 
 var port = 3000;
-var mongoUri = "mongodb://localhost:27017/ecommerce";
+var mongoUri = "mongodb://localhost:27017/shopagram";
 
 mongoose.set('debug', true);
 mongoose.connect(mongoUri);

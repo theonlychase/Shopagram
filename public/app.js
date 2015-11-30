@@ -7,7 +7,7 @@ angular.module('personal-project', [
   .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
 
     $urlRouterProvider
-      .otherwise('/dashboard');
+      .otherwise('/dashboard/overview');
 
     $stateProvider
       .state('dashboard', {
@@ -34,6 +34,16 @@ angular.module('personal-project', [
         url: '/settings',
         templateUrl: 'partials/settings.html',
         controller: 'settingsCtrl'
+      })
+      .state('dashboard.overview', {
+        url: '/overview',
+        templateUrl: 'partials/overview.html',
+        controller: 'overviewCtrl'
+      })
+      .state('dashboard.posts', {
+        url: '/overview',
+        templateUrl: 'partials/posts.html',
+        controller: 'postsCtrl'
       });
 
   });

@@ -1,16 +1,18 @@
+body {
+  background-color: #f4f8fa;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 header, main, footer {
   padding-left: 240px;
   }
 
-  main {
+  #main {
     background-color: #f4f8fa;
-    height: 100%;
+    flex: 1 0 auto;
   }
-
-  @media only screen and (max-width : 992px) {
-    header, main, footer {
-      padding-left: 0; }
-    }
 
 .class-test {
     display: table;
@@ -194,6 +196,41 @@ nav.top-nav {
     padding: 0 10px;
 }
 
+.center-dash {
+  text-align: center;
+}
+
+.dash-inline {
+  display: inline-block;
+  padding-right: 30px;
+}
+
+.ul-container {
+  width: 550px;
+  margin: 0 auto;
+  background-color: #e57373;
+  border-radius: 5px;
+}
+
+.li-padding {
+  padding: 25px 25px 0 25px;
+  display: inline-block;
+}
+
+.text-overview {
+  color: #fff;
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+.button-overview {
+  text-align: center;
+}
+
+.launch-button {
+  text-align: center;
+  padding-bottom: 25px;
+}
 
     @media only screen and (max-width : 992px) {
       nav .nav-wrapper {
@@ -204,3 +241,22 @@ nav.top-nav {
     @media only screen and (min-width : 993px) {
       .container {
         width: 85%; } }
+
+    @media only screen and (max-width : 993px) {
+      .ul-container {
+        width: 100%;
+        text-align: center;
+      }
+      .text-overview {
+        width: 100%;
+      }
+      .button-overview {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    @media only screen and (max-width : 992px) {
+      header, main, footer {
+        padding-left: 0; }
+      }

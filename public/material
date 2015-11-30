@@ -22,3 +22,16 @@
       </div>
     </div>
   </form>
+
+//For Overview Page
+  <div class="row">
+    <div class="col s12 l6">
+      <p>Your first step is to connect to Instagram. This will allow you to start adding posts to your Shopagram page.</p>
+    </div>
+    <div class="col s12 l6 center-dash">
+      <h5 class="dash-inline">
+        Connect to Instagram
+      </h5>
+      <a class="btn"><i class="material-icons">check</i></a>
+    </div>
+  </div>
