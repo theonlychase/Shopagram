@@ -210,6 +210,7 @@ nav.top-nav {
   margin: 0 auto;
   background-color: #e57373;
   border-radius: 5px;
+  margin-top: 20px;
 }
 
 .li-padding {
@@ -231,6 +232,13 @@ nav.top-nav {
   text-align: center;
   padding-bottom: 25px;
 }
+
+/*Posts Page*/
+
+.post-image-link {
+  cursor: pointer;
+}
+
 
     @media only screen and (max-width : 992px) {
       nav .nav-wrapper {

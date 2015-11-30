@@ -8,6 +8,7 @@ angular.module('personal-project', [
 
     $urlRouterProvider
       .otherwise('/dashboard/overview');
+      //cookies, localstorage or session storage. these are parts of the browser.
 
     $stateProvider
       .state('dashboard', {
@@ -30,6 +31,7 @@ angular.module('personal-project', [
         templateUrl: 'partials/forgot-password.html',
         controller: 'forgotPasswordCtrl'
       })
+      //Nested Views//
       .state('dashboard.settings', {
         url: '/settings',
         templateUrl: 'partials/settings.html',
@@ -41,7 +43,7 @@ angular.module('personal-project', [
         controller: 'overviewCtrl'
       })
       .state('dashboard.posts', {
-        url: '/overview',
+        url: '/posts',
         templateUrl: 'partials/posts.html',
         controller: 'postsCtrl'
       });
