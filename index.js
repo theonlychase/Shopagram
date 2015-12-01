@@ -31,7 +31,7 @@ app.use(express.static(__dirname + '/public'));
 //Connections//
 ///////////////
 
-var port = 3000;
+var port = 8090;
 var mongoUri = "mongodb://localhost:27017/shopagram";
 
 mongoose.set('debug', true);

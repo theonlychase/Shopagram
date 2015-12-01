@@ -12,7 +12,7 @@ angular.module('personal-project', [
 
     $stateProvider
       .state('dashboard', {
-        url: '/dashboard',
+        url: '/dashboard', //url: '/:user/dashboard',
         templateUrl: 'partials/dashboard.html',
         controller: 'dashboardCtrl'
       })
@@ -31,6 +31,11 @@ angular.module('personal-project', [
         templateUrl: 'partials/forgot-password.html',
         controller: 'forgotPasswordCtrl'
       })
+      .state('shop', {
+        url: 'shop', //url: '/:user/shop'
+        templateUrl: 'partials/shop.html',
+        controller: 'shopCtrl'
+      })
       //Nested Views//
       .state('dashboard.settings', {
         url: '/settings',
@@ -46,6 +51,11 @@ angular.module('personal-project', [
         url: '/posts',
         templateUrl: 'partials/posts.html',
         controller: 'postsCtrl'
+      })
+      .state('dashboard.edit-product', {
+        url: '/edit-product',
+        templateUrl: 'partials/edit-product.html',
+        controller: 'editProductCtrl'
       });
 
   });

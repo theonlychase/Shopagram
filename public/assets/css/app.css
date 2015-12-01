@@ -1,9 +1,17 @@
 body {
   background-color: #f4f8fa;
+}
+
+.page-flexbox-wrapper {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
+
+main {
+  flex: 1 0 auto;
+}
+
 
 header, main, footer {
   padding-left: 240px;
@@ -237,6 +245,15 @@ nav.top-nav {
 
 .post-image-link {
   cursor: pointer;
+}
+
+/*Shop Page*/
+.shop-logo {
+  padding-top: 6px;
+}
+
+.top-padding {
+  padding-top: 25px;
 }
 
 
