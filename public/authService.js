@@ -35,7 +35,7 @@ angular
       var deferred = $q.defer();
 
       // send a post request to the server
-      $http.post('/user/login', {username: username, password: password})
+      $http.post('/api/user/login', {username: username, password: password})
         // handle success
         .success(function (data, status) {
           if(status === 200 && data.status){
@@ -63,7 +63,7 @@ angular
       var deferred = $q.defer();
 
       // send a get request to the server
-      $http.get('/user/logout')
+      $http.get('/api/user/logout')
         // handle success
         .success(function (data) {
           user = false;
@@ -86,7 +86,7 @@ angular
       var deferred = $q.defer();
 
       // send a post request to the server
-      $http.post('/user/register', {username: username, password: password})
+      $http.post('/api/user/register', {username: username, password: password})
         // handle success
         .success(function (data, status) {
           if(status === 200 && data.status){

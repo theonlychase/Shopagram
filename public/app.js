@@ -1,63 +1,83 @@
 (function() {
     'use strict';
 
-angular.module('personal-project', [
+var myApp = angular.module('personal-project', [
   'ui.router',
 ])
   .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
 
     $urlRouterProvider
-      .otherwise('/dashboard/overview');
+      .otherwise('/login');
       //cookies, localstorage or session storage. these are parts of the browser.
 
     $stateProvider
       .state('dashboard', {
         url: '/dashboard', //url: '/:user/dashboard',
         templateUrl: 'partials/dashboard.html',
-        controller: 'dashboardCtrl'
+        controller: 'dashboardCtrl as dashboard',
+        abstract: true,
+        authenticate: true
       })
       .state('login', {
         url: '/login',
         templateUrl: 'partials/login.html',
-        controller: 'loginCtrl'
+        controller: 'loginCtrl as login',
+        authenticate: false
       })
       .state('register', {
         url: '/register',
         templateUrl: 'partials/register.html',
-        controller: 'registerCtrl'
+        controller: 'registerCtrl as register',
+        authenticate: false
       })
       .state('forgot-password', {
         url: '/forgot-password',
         templateUrl: 'partials/forgot-password.html',
-        controller: 'forgotPasswordCtrl'
+        controller: 'forgotPasswordCtrl',
+        authenticate: false
       })
       .state('shop', {
-        url: 'shop', //url: '/:user/shop'
+        url: '/shop:id', //url: '/:user/shop'
         templateUrl: 'partials/shop.html',
-        controller: 'shopCtrl'
+        controller: 'shopCtrl as shop',
+        authenticate: false
       })
       //Nested Views//
       .state('dashboard.settings', {
         url: '/settings',
         templateUrl: 'partials/settings.html',
-        controller: 'settingsCtrl'
+        controller: 'settingsCtrl as settings',
+        authenticate: true
       })
       .state('dashboard.overview', {
         url: '/overview',
         templateUrl: 'partials/overview.html',
-        controller: 'overviewCtrl'
+        controller: 'overviewCtrl as overview',
+        authenticate: true
       })
       .state('dashboard.posts', {
         url: '/posts',
         templateUrl: 'partials/posts.html',
-        controller: 'postsCtrl'
+        controller: 'postsCtrl as posts',
+        authenticate: true
       })
       .state('dashboard.edit-product', {
         url: '/edit-product',
         templateUrl: 'partials/edit-product.html',
-        controller: 'editProductCtrl'
+        controller: 'editProductCtrl as editProducts',
+        authenticate: true
       });
 
+  })
+
+  .run(function ($rootScope, $state, AuthService) {
+  $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+    console.log('moving to', toState);
+    if (toState.authenticate && AuthService.isLoggedIn() === false) {
+      $state.transitionTo('login');
+      event.preventDefault();
+    }
   });
+});
 
 })();

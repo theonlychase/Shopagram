@@ -37,7 +37,6 @@ var routes = require('./server/routes/api.js');
 //////////////////////
 //Express MiddleWare//
 /////////////////////
-app.use(express.static(__dirname + '/public'));
 app.use(logger('dev'));
 app.use(cors());
 app.use(bodyParser.json());
@@ -62,11 +61,7 @@ passport.deserializeUser(User.deserializeUser());
 ///////////
 //Routes//
 //////////
-app.use('/user/', routes);
-
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, '../public', 'index.html'));
-});
+app.use('/api/user/', routes);
 
 ///////////////////
 //Error Handlers//
