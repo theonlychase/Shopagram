@@ -1,0 +1,48 @@
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal bottom-sheet modal-size">
+    <div class="navbar-fixed">
+      <nav class="nav-modal">
+        <div class="nav-wrapper">
+          <div class="brand-logo center">Add A New Product</div>
+        </div>
+      </nav>
+    </div>
+    <div class="modal-content">
+      <div class="card hoverable large">
+        <div class="card-title">
+            <h5 class="title-font title-padding center">Add the url of your product page below</h5>
+            <div class="divider"></div>
+        </div>
+        <div class="card-content">
+          <div class="row no-margin-top">
+            <div class="col s12 l3">
+              <label class="label-title" for="Store Name">
+                <img class="responsive-img" ng-src="{{posts.imageURL}}">
+              </label>
+            </div>
+            <div class="input-field col s12 l9">
+                <i class="material-icons prefix">store</i>
+                <input id="store_prefix" ng-model="posts.url" type="text">
+                <label for="icon_prefix">URL</label>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    <div class="modal-footer">
+      <div class="modal-align">
+        <div class="button-inline"><a href="" ng-click="posts.postNewProduct()" class="waves-effect waves-green btn modal-action modal-close">Save Product</a></div>
+        <div class="button-inline"><a href="" class="modal-action modal-close waves-effect waves-green btn">Cancel</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div ng-repeat="images in posts.posts" repeat-done="posts.initModals()" class="col s12 l3">
+      <div class="card hoverable">
+        <div class="card-image">
+          <a class="post-image-link modal-trigger" href="#modal1"><img ng-src="{{images.image}}" ng-click="posts.addProduct($index)"/></a>
+        </div>
+      </div>
+    </div>
+  </div>

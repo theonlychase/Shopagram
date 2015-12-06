@@ -17,7 +17,7 @@
   </div>
 </nav>
 <div class="container">
-  <a href="#" data-activities="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
+  <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
     <i class="mdi-navigation-menu"></i>
   </a>
 </div>
@@ -33,22 +33,15 @@
     <li class="bold"><a ui-sref="dashboard.overview" class="waves-effect waves-teal">Dashboard</a></li>
     <li class="no-padding">
       <ul class="collapsible collapsible-accordion">
-        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Manage</a>
+        <li class="bold"><a class="collapsible-header waves-effect waves-teal">Manage</a>
           <div class="collapsible-body" style="display: none;">
             <ul>
               <li><a ui-sref="dashboard.posts">Posts</a></li>
-              <li><a href="grid.html">Products</a></li>
+              <li><a ui-sref="dashboard.products">Products</a></li>
             </ul>
           </div>
         </li>
-        <li class="bold"><a ui-sref="dashboard.settings" class="collapsible-header  waves-effect waves-teal">Settings</a>
-          <div class="collapsible-body" style="display: none;">
-            <ul>
-              <li><a href="badges.html">Edit Profile</a></li>
-              <li><a href="buttons.html">Connect</a></li>
-            </ul>
-          </div>
-        </li>
+        <li class="bold"><a ui-sref="dashboard.settings" class="collapsible-header waves-effect waves-teal">Settings</a></li>
       </ul>
     </li>
     <li class="bold"><a ui-sref="shop" class="waves-effect waves-teal">View Shop</a></li>

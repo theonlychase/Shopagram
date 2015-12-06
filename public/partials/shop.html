@@ -5,45 +5,10 @@
 </nav>
 <div class="container top-padding">
   <div class="row">
-    <div class="col s12 l3">
+    <div ng-repeat="product in shop.createdProducts" class="col s12 l3">
       <div class="card hoverable">
         <div class="card-image">
-          <a class="post-image-link"><img src="assets/img/chase.jpg" alt="" /></a>
-        </div>
-      </div>
-    </div>
-    <div class="col s12 l3">
-      <div class="card hoverable">
-        <div class="card-image">
-          <a class="post-image-link"><img src="assets/img/chase.jpg" alt="" /></a>
-        </div>
-      </div>
-    </div>
-    <div class="col s12 l3">
-      <div class="card hoverable">
-        <div class="card-image">
-          <a class="post-image-link"><img src="assets/img/chase.jpg" alt="" /></a>
-        </div>
-      </div>
-    </div>
-    <div class="col s12 l3">
-      <div class="card hoverable">
-        <div class="card-image">
-          <a class="post-image-link"><img src="assets/img/chase.jpg" alt="" /></a>
-        </div>
-      </div>
-    </div>
-    <div class="col s12 l3">
-      <div class="card hoverable">
-        <div class="card-image">
-          <a class="post-image-link"><img src="assets/img/chase.jpg" alt="" /></a>
-        </div>
-      </div>
-    </div>
-    <div class="col s12 l3">
-      <div class="card hoverable">
-        <div class="card-image">
-          <a class="post-image-link"><img src="assets/img/chase.jpg" alt="" /></a>
+          <a class="post-image-link" href="{{product.url}}"><img ng-src="{{product.picture}}"/></a>
         </div>
       </div>
     </div>

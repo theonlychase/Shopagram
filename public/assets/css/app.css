@@ -247,6 +247,32 @@ nav.top-nav {
   cursor: pointer;
 }
 
+.modal.bottom-sheet {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.modal-size {
+  max-height: 800px !important;
+}
+
+.nav-modal {
+  width: 80%;
+}
+
+.modal-align {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.button-inline {
+  display: inline-block;
+}
+
+.button-padding {
+  padding-right: 20px;
+}
+
 /*Shop Page*/
 .shop-logo {
   padding-top: 6px;
@@ -278,6 +304,13 @@ nav.top-nav {
       .button-overview {
         width: 100%;
         text-align: center;
+      }
+      .modal-size {
+        max-height: 500px !important;
+        width: 100% !important;
+      }
+      .nav-modal {
+        width: 100%;
       }
     }
 

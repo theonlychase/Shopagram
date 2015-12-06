@@ -37,7 +37,7 @@ var myApp = angular.module('personal-project', [
         authenticate: false
       })
       .state('shop', {
-        url: '/shop:id', //url: '/:user/shop'
+        url: '/shop', //url: '/:user/shop'
         templateUrl: 'partials/shop.html',
         controller: 'shopCtrl as shop',
         authenticate: false
@@ -59,12 +59,20 @@ var myApp = angular.module('personal-project', [
         url: '/posts',
         templateUrl: 'partials/posts.html',
         controller: 'postsCtrl as posts',
-        authenticate: true
+        authenticate: true,
+        resolve: {
+          postsResolve: function(apiService) {
+            return apiService.fetchInstagram().then(function (dataFromService) {
+              return dataFromService;
+            });
+          }
+        }
+
       })
-      .state('dashboard.edit-product', {
-        url: '/edit-product',
-        templateUrl: 'partials/edit-product.html',
-        controller: 'editProductCtrl as editProducts',
+      .state('dashboard.products', {
+        url: '/products',
+        templateUrl: 'partials/products.html',
+        controller: 'productsCtrl as products',
         authenticate: true
       });
 

@@ -3,9 +3,9 @@
 
 angular
   .module('personal-project')
-  .controller('shopCtrl', shopCtrl);
+  .controller('productsCtrl', productsCtrl);
 
-  function shopCtrl(userService) {
+  function productsCtrl(userService) {
     var vm = this;
 
     vm.getCreatedProducts = function() {
@@ -16,7 +16,14 @@ angular
     };
     vm.getCreatedProducts();
 
-  }
+  vm.removeProduct = function(id) {
+    console.log('hello');
+    userService.removeProduct(id).then(function(response) {
+      vm.createdProducts = response;
+    });
+  };
+
+}
 
 
 })();

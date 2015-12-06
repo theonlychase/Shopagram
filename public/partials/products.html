@@ -1,0 +1,10 @@
+<div class="row">
+  <div ng-repeat="product in products.createdProducts" class="col s12 l3">
+    <div class="card hoverable">
+      <div class="card-image">
+        <a class="post-image-link" href=""><img ng-src="{{product.picture}}"/></a>
+        <a class="btn" ng-click="products.removeProduct(product._id)">Remove</a>
+      </div>
+    </div>
+  </div>
+</div>

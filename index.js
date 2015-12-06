@@ -18,11 +18,12 @@ var express = require('express'),
 //User Schema//
 ///////////////
 var User = require('./server/models/users.js');
+var Pictures = require('./server/models/pictures.js');
 
 ///////////////
 //Controllers//
 ///////////////
-
+var PicturesCtrl = require('./server/controllers/PicturesCtrl');
 
 ////////////
 //Express//
@@ -57,6 +58,13 @@ app.use(express.static(path.join(__dirname, '/public')));
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
+/////////////
+//Endpoints//
+////////////
+app.post('/api/pictures/', PicturesCtrl.create);
+app.get('/api/pictures/', PicturesCtrl.read);
+app.delete('/api/pictures/:id', PicturesCtrl.delete);
 
 ///////////
 //Routes//
